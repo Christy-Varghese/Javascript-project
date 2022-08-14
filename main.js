@@ -41,15 +41,3 @@ const createSpreadSheet = () => {
 }
 
 createSpreadSheet()
-
-
-const evalValues = () => {
-    var res = document.getElementById("enterValue").value
-    if (res.charAt(0) === "=") {
-        var str = res.split("=")[1]
-        var first = str.split("+")[0]
-        var second = str.split("+")[1]
-        console.log(first, second)
-    }
-
-}
