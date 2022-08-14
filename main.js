@@ -25,7 +25,7 @@ const createSpreadSheet = () => {
     // Create header cells
     for (var j = 1; j <= noOfCols; j++) {
         var cellHeader = String.fromCharCode("A".charCodeAt(0) + j - 1)
-        console.log(cellHeader)
+            // console.log(cellHeader)
         titleRow.insertCell(-1).innerHTML = cellHeader
     }
 
@@ -36,11 +36,35 @@ const createSpreadSheet = () => {
 
         for (var j = 1; j <= noOfCols; j++) {
             var alpha = String.fromCharCode("A".charCodeAt(0) + j - 1)
-            rowTitle.insertCell(-1).innerHTML = "<td id='" + alpha + i + "'></td>"
-            console.log(alpha + i)
+            rowTitle.insertCell(-1).innerHTML = "<td id='" + alpha + i + "'> </td>"
+                // console.log(alpha + i)
         }
     }
 }
 
 // Table created
 createSpreadSheet()
+
+// to highlight the cell
+var prepareTable = function() {
+    var cells = document.getElementsByTagName("td");
+    console.log("Button clicked")
+    for (var i = 0; i < cells.length; i++) {
+        cells[i].onclick = function(event) {
+            var bgColor = '#d25858'
+            if (event.target.style.backgroundColor == bgColor) {
+                event.target.style.backgroundColor = '#ffffff'
+            } else {
+                event.target.style.backgroundColor = bgColor
+            }
+        }
+    }
+}
+document.onload = prepareTable();
+
+function clearAll() {
+    var cells = document.getElementsByTagName("td");
+    for (var i = 0; i < cells.length; i++) {
+        cells[i].style.backgroundColor = '#ffffff'
+    }
+}

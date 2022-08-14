@@ -23,7 +23,8 @@
 <body onload="init()">
     <div>
         <input id="clear-button" type="button" value="Clear" onclick="clearAll()" />
-        <input id="enterValue" onkeypress="evalValues()" />
+        <br><br>
+        <input id="enterValue" type="text" onkeypress="evalValues(this)" />
         <br><br>
         <table id="SpreadsheetTable">
             <!-- Spreadsheet table created dynamically at run-time -->

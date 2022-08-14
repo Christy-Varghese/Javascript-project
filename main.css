@@ -12,16 +12,22 @@ body {
     background-color: #97edf3;
 }
 
+
+/* Clear button */
+
 #clear-button:hover {
     background-color: #0b373a;
     color: #ccc;
 }
 
+
+/* Input Button */
+
 input {
-    width: 100%;
-    padding: 12px 20px;
+    width: 75%;
+    padding: 20px;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(250, 250, 250);
     box-sizing: border-box;
 }
 
@@ -31,17 +37,10 @@ td {
 
 #SpreadsheetTable td:not(:first-child) {
     width: 10%;
-    background-color: azure;
 }
 
-#SpreadsheetTable td:not(:first-child):hover {
-    background-color: #0b373a;
-    color: #ccc;
-}
-
-tr:first-child td,
-td:first-child {
-    background-color: #ccc;
+#SpreadsheetTable td {
+    background-color: #ffffff;
     padding: 1px 3px;
     font-weight: bold;
     text-align: center;
