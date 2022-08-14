@@ -1,0 +1,38 @@
+/* 
+  Name                : Christy Varghese
+  Student id          : 1082636
+  Fanshawe MailID     : c_varghese161701@fanshaweonline.ca
+  Course Name         : INFO 6122 Programming Javascript
+  Professor           : Sumit Shrestha
+  Date of Submission  : August 14th, 2022
+  Final Project  
+*/
+
+body {
+    background-color: #97edf3;
+}
+
+#clear-button:hover {
+    background-color: #0b373a;
+    color: #ccc;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+td {
+    border: 1px solid #999;
+}
+
+tr:first-child td,
+td:first-child {
+    background-color: #ccc;
+    padding: 1px 3px;
+    font-weight: bold;
+    text-align: center;
+}
