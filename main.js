@@ -18,26 +18,29 @@ const noOfCols = 10;
 
 // Dynamically added table
 const createSpreadSheet = () => {
-    var spreadSheet = document.getElementById("SpreadsheetTable")
-    var headerRow = spreadSheet.insertRow(-1)
-    var cornerCell = headerRow.insertCell(-1)
+    var sheetTable = document.getElementById("SpreadsheetTable")
+    var titleRow = sheetTable.insertRow(-1)
+    var cornerCell = titleRow.insertCell(-1)
 
     // Create header cells
     for (var j = 1; j <= noOfCols; j++) {
         var cellHeader = String.fromCharCode("A".charCodeAt(0) + j - 1)
-        headerRow.insertCell(-1).innerHTML = cellHeader
+        console.log(cellHeader)
+        titleRow.insertCell(-1).innerHTML = cellHeader
     }
 
     // Create data cells
     for (var i = 1; i <= noOfRows; i++) {
-        var row = spreadSheet.insertRow(-1)
-        row.insertCell(-1).innerHTML = i
+        var rowTitle = sheetTable.insertRow(-1)
+        rowTitle.insertCell(-1).innerHTML = i
 
         for (var j = 1; j <= noOfCols; j++) {
-            var letter = String.fromCharCode("A".charCodeAt(0) + j - 1)
-            row.insertCell(-1).innerHTML = "<input id='" + letter + i + "'/>"
+            var alpha = String.fromCharCode("A".charCodeAt(0) + j - 1)
+            rowTitle.insertCell(-1).innerHTML = "<td id='" + alpha + i + "'></td>"
+            console.log(alpha + i)
         }
     }
 }
 
+// Table created
 createSpreadSheet()

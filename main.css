@@ -29,6 +29,16 @@ td {
     border: 1px solid #999;
 }
 
+#SpreadsheetTable td:not(:first-child) {
+    width: 10%;
+    background-color: azure;
+}
+
+#SpreadsheetTable td:not(:first-child):hover {
+    background-color: #0b373a;
+    color: #ccc;
+}
+
 tr:first-child td,
 td:first-child {
     background-color: #ccc;
